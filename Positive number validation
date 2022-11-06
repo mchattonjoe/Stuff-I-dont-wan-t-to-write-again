@@ -1,0 +1,17 @@
+   
+   //Method for checking for valid input.
+   public static int number(String input){
+        Scanner scanInt = new Scanner(System.in);
+        int number = -1;
+    while(number<0){
+        System.out.println("Input Number: ");
+         input = scanInt.nextLine();
+        try{
+            number = Integer.valueOf(input);
+        }catch(NumberFormatException e)
+        {
+            number = -1;
+        }
+    }
+        return number;
+    }
